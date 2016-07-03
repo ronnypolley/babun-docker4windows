@@ -89,12 +89,12 @@ fi
 # Setup update
 function babun-docker4windows-update {
 	# save working directory
-	pushd $(pwd)
+	pushd $(pwd) > /dev/null
 	echo "Updating babun-docker4windows"
 	cd $babun_docker4windows_dir
 	git pull
 	source ./setup.sh
-	popd
+	popd > /dev/null
 }
 
 popd > /dev/null
