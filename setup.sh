@@ -40,7 +40,9 @@ fi
 
 # Enter the .winpty directory to download winpty
 cd $winpty_dir
-if [[ ! -f winpty.exe ]] ; then
+
+# check if version file exists and check if the version has changed -> download new version
+if [[ ! -e version || $(cat version) != $winpty_version ]] ; then
    # Remove old files
    rm -rf ./*
    # Download winpty
