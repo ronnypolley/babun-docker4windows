@@ -6,5 +6,5 @@ if [[ -z "$docker_bin" ]] ; then
 fi
 # we just prefix the docker command with the console.exe from winpty
 function docker {
-	console $docker_bin $@
+	winpty $docker_bin $@
 }
