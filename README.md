@@ -1,8 +1,10 @@
 # babun-docker4windows
 
+The work for this script is mostly based on [babun-docker](https://github.com/tiangolo/babun-docker). 
+
 ## Description
 
-This is a fix allowing the use of [Docker for Windows](https://docs.docker.com/docker-for-windows/) from [Babun](http://babun.github.io). This is based on the idea used in [babun-docker](https://github.com/tiangolo/babun-docker).
+This is a fix allowing the use of [Docker for Windows](https://docs.docker.com/docker-for-windows/) from [Babun](http://babun.github.io) based on the idea used in [babun-docker](https://github.com/tiangolo/babun-docker).
 
 If your're still using [Docker Toolbox](https://www.docker.com/toolbox) than you should use [babun-docker](https://github.com/tiangolo/babun-docker).
 
