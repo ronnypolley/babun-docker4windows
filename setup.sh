@@ -28,7 +28,7 @@ winpty_url="https://github.com/rprichard/winpty/releases/download/${winpty_versi
 babun_docker_repo='https://github.com/ronnypolley/babun-docker4windows.git'
 
 # put current folder on the stack
-pushd .
+pushd . > /dev/null
 
 # Directory in where to put Winpty
 winpty_dir="$HOME/.winpty"
@@ -95,4 +95,4 @@ function babun-docker4windows-update {
 	popd
 }
 
-popd
+popd > /dev/null
