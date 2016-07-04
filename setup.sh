@@ -27,7 +27,6 @@ winpty_url="https://github.com/rprichard/winpty/releases/download/${winpty_versi
 # babun-docker repo
 babun_docker_repo='https://github.com/ronnypolley/babun-docker4windows.git'
 
-
 # Directory in where to put Winpty
 winpty_dir="$HOME/.winpty"
 
@@ -37,7 +36,9 @@ if [[ ! -d $winpty_dir ]] ; then
 fi
 
 # Enter the .winpty directory to download winpty
-pushd $winpty_dir > /dev/null
+old_pwd=$(pwd)
+cd $winpty_dir 
+
 # check if version file exists and check if the version has changed -> download new version
 if [[ ! -e version || $(cat version) != $winpty_version ]] ; then
    # Remove old files
@@ -87,10 +88,10 @@ fi
 function babun-docker4windows-update {
 	# save working directory
 	echo "Updating babun-docker4windows"
-	pushd $babun_docker4windows_dir > /dev/null
+	old_pwd=$(pwd)
+	cd $babun_docker4windows_dir 
 	git pull
 	source ./setup.sh
-	popd > /dev/null
+	cd $old_pwd
 }
-cd $(dirs -0)
-dirs -c
+cd $old_pwd
