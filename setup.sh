@@ -88,10 +88,10 @@ fi
 function babun-docker4windows-update {
 	# save working directory
 	echo "Updating babun-docker4windows"
-	old_pwd=$(pwd)
+	old_pwd_update=$(pwd)
 	cd $babun_docker4windows_dir 
 	git pull
 	source ./setup.sh
-	cd $old_pwd
+	cd $old_pwd_update
 }
 cd $old_pwd
