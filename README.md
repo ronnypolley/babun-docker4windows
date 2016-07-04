@@ -10,28 +10,30 @@ If your're still using [Docker Toolbox](https://www.docker.com/toolbox) than you
 
 The main problem using docker from babun is running in a non-tty environment and there for does not supprt the _interactive_ mode of docker. The script will make use of [winpty](https://github.com/rprichard/winpty) to permit docker calls like:
 
-```docker run -it -v ubuntu:latest /bin/bash```
+```
+docker run -it -v ubuntu:latest /bin/bash
+```
 
-The setup script will install a function called ```docker``` which just calls the normal docker program using winpty as a prefix.
+The setup script will install a function called `docker` which just calls the normal docker program using winpty as a prefix.
 
 # Prerequisite
 
-* Install [Docker for Windows](https://docs.docker.com/docker-for-windows/) 
-* Install [Babun](http://babun.github.io)
+1. Install [Docker for Windows](https://docs.docker.com/docker-for-windows/) 
+2. Install [Babun](http://babun.github.io)
 
 
 # Installation
 
-```
+```bash
 curl -s https://raw.githubusercontent.com/ronnypolley/babun-docker4windows/master/setup.sh | source /dev/stdin
 ```
 
 Check that the installation was succesfully:
 
-```
+```bash
 which docker
 ```
 
-This should be a function and not a file.
+This should be the function from [babun-docker.sh](bin/babun-docker.sh).
 
 
